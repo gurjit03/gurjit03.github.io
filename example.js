@@ -52,10 +52,10 @@ net.train([{input: {pos: 0.0}, output: {pos: 0.4}},
       		let indexOfFirstFont = checkInFontsArray(firstFont);
           if(indexOfFirstFont > -1) {
       			let newIndex = modifyIndex(indexOfFirstFont);
-
+            console.log(newIndex);
       			// Run the model
       			let output = net.run({pos: newIndex});
-
+            console.log(output);
             let expo = getLength(indexOfFirstFont);
             // Change the index back to it's original form
             console.log(typeof expo);
@@ -79,6 +79,9 @@ net.train([{input: {pos: 0.0}, output: {pos: 0.4}},
           return 0.0;
 
           let expo = getLength(index);
+          if(expo > 1) {
+            expo += 1;
+          }
       		return index / Math.pow(10,expo);
       	}
       	////////////////////////////////////
