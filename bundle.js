@@ -60,7 +60,7 @@ net.train([{input: {pos: 0.0}, output: {pos: 0.4}},
             let expo = getLength(indexOfFirstFont);
             // Change the index back to it's original form
             console.log(typeof expo);
-            let outputIndexWithDec = output.pos * Math.pow(10,expo);
+            let outputIndexWithDec = output.pos * fonts.length;
             let outputIndex = Math.floor(outputIndexWithDec);
       			return outputIndex;
       		}
