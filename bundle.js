@@ -85,7 +85,7 @@ net.train([{input: {pos: 0}, output: {pos: 0.4}},
       	////////////////////////////////////
       	var outputDiv = document.getElementById('output');
       	var getOutput = document.getElementById('getOutput');
-        var dataForm = document.getElementByClassName('data-form')[0];
+        var dataForm = document.getElementsByClassName('data-form')[0];
       	console.log(getOutput);
 
         var getOutputAction = (e) => {
